@@ -1,13 +1,15 @@
 import { makeStyles } from '@material-ui/core';
 import Head from 'next/head';
 import TopBar from './TopBar';
+import NavBar from './NavBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     display: 'flex',
     overflow: 'hidden',
-    width: '100vw'
+    width: '100vw',
+    height: '100vh'
   },
   wrapper: {
     display: 'flex',
@@ -42,10 +44,12 @@ function Layout({ children, title }) {
       </Head>
       <div className={classes.root}>
         <TopBar />
-        <div>sidebar</div>
+        <NavBar />
         <div className={classes.wrapper}>
           <div className={classes.contentContainer}>
-            <div className={classes.content}>{children}</div>
+            <div className={classes.content}>
+              {children}
+            </div>
           </div>
         </div>
       </div>
