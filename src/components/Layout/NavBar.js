@@ -69,7 +69,7 @@ const primaryMenu = [
   },
 ];
 
-const secondaryManu = [
+const secondaryMenu = [
   { 
     id: 1, 
     label: 'Biblioteca', 
@@ -118,7 +118,7 @@ function NavBar() {
       <Divider />
 
       <List>
-        {secondaryManu.map((item) => {
+        {secondaryMenu.map((item) => {
           const Icon = item.icon;
           return (
             <ListItem
