@@ -10,6 +10,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta charset="utf-8" />
           <link 
             rel="shortcut icon"
             href="https://www.youtube.com/s/desktop/a386e432/img/favicon.ico"
