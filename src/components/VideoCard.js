@@ -21,6 +21,9 @@ const useStyles = makeStyles(() => ({
 
 function VideoCard({ item }) {
   const classes = useStyles();
+  const router = useRouter();
+
+
 
   return (
     <Box>
@@ -31,12 +34,12 @@ function VideoCard({ item }) {
         src={item.thumb}
         className={classes.img}
         layout="intrinsic"
-        // onClick={() =>
-        //   router.push({
-        //     pathname: '/video/[id]',
-        //     query: { id: item._id },
-        //   })
-        // }
+        onClick={() =>
+          router.push({
+            pathname: '/video/[id]',
+            query: { id: item._id },
+          })
+        }
       />
       <Box display="flex" mt="1" >
         <Box mr={2}>
